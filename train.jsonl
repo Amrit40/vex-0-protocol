@@ -1,0 +1,4 @@
+{"instruction": "Search for quantum computing news, summarize into 3 points, and email to team@org.com", "output": "@0x01$\"q_news\"^w_srch(\"quantum computing\")->r0!#E0~sum3(r0)->r1?r1^eml(\"team@org.com\",r1)!#E1#OK"}
+{"instruction": "Fetch user ticket, check if sentiment is angry, escalate if true, otherwise reply with KB solution", "output": "@0x02$\"triage\"^get_tkt()->r0~sent(r0)->r1?r1==\"angry\"^esc(r0)#ESC!^kb_srch(r0)->r2^reply(r0,r2)#OK"}
+{"instruction": "Read local file data.csv, filter rows with errors, and save to clean.csv", "output": "@0x03$\"etl\"^f_read(\"data.csv\")->r0!#E0~flt_err(r0)->r1^f_write(\"clean.csv\",r1)#OK"}
+{"instruction": "Query database for active users, calculate 7-day retention, and post metric to Slack", "output": "@0x04$\"metrics\"^db_q(\"SELECT * FROM users WHERE active=1\")->r0~calc_ret7(r0)->r1^slack_post(\"#analytics\",r1)#OK"}
